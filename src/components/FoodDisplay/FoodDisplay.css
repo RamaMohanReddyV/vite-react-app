@@ -1,0 +1,101 @@
+.food-display {
+    margin-top: 30px;
+    padding: 0 30px;
+}
+
+.food-display h2 {
+    font-size: max(2vw, 24px);
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.food-display-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 30px;
+    row-gap: 50px;
+}
+
+/* Card Styles (Optional but recommended for better UI) */
+.food-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+    text-align: center;
+}
+
+.food-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Image responsiveness inside food card */
+.food-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    max-height: 180px;
+}
+
+/* Food title and description styles */
+.food-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #444;
+    margin-top: 10px;
+}
+
+.food-card p {
+    font-size: 14px;
+    color: #777;
+    margin-top: 5px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .food-display {
+        padding: 0 20px;
+    }
+
+    .food-display-list {
+        gap: 20px;
+        row-gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .food-display h2 {
+        font-size: 20px;
+    }
+
+    .food-card h3 {
+        font-size: 16px;
+    }
+
+    .food-card p {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .food-display {
+        padding: 0 10px;
+    }
+
+    .food-display h2 {
+        font-size: 18px;
+    }
+
+    .food-card {
+        padding: 15px;
+    }
+
+    .food-card img {
+        max-height: 140px;
+    }
+}
